@@ -1,20 +1,11 @@
-/**
- * The Silicon Dispatch - Cryptographic Storage Vault
- * 
- * Implements AES-256-GCM authenticated cipher with 100,000 PBKDF2 iterations.
- * Contains split-key threshold entropy Share B.
- * 
- * ZERO plaintext credentials, API keys, or backend addresses are exposed
- * in the repository or static deployment on GitHub Pages.
- */
 (function (global) {
     "use strict";
 
     const VAULT_STORE = {
-        salt: "rdfbBJZ50LXO8gO5AQ3Dmg==",
-        iv: "Mi9zvKbiNlyxHuOA",
-        ciphertext: "84i+9ALc3b/cvPBXmu8yZjeH43IRqieScFdaB5qCDz8wqr/QoG7RaM7xEXUdUF73mw3QAgSDvvNPV6d8XdsekGrGsPzhSx5JsUoCGFu6MVqpPI6jo1VCteOexTuedQHpNDkJ+g2dASx9a3PjXZRcIRMolD4TGgLnAwTwrGD7qXrLEZ2zn2p/b9w1Z+FSxXCyQ+IWsySur0ME1sG1E5URwWTCmJwkJWuAtcmTI4P4EgP415P9wyX96cc8CDrHtq/DnHm/r37rHESoiBPTfmCB9lBiDZADyjEObOZN5JWNO+pq7Ep3zOztHbDuWlwt8Sis1DFuwA==",
-        entropy: [112,227,146,46,242,215,203,43,80,43,177,191,158,75,80,170,115,171,226,201,165,64,25,148,101,229,3,207,93,229,245,139]
+        salt: "/xC3pssIilFqfuzOSqyMcw==",
+        iv: "h5gOspSaEB+a8ZTN",
+        ciphertext: "01P3DHkwo26kjoogqmF/++d/e2o6Z8MSFe6QoCi9gFqyMjV21TBS3ydKuzRYvpH2p4kZ9BqfD3bwr8GM50W1FNlbUfyya2Gko7HsFoG9iONLICqcbYAAhv9Yo4nQ/dP+FYn5Kbd4oK3c0Ja9YLFbQ1nuJABLjpRHb+5418OPf2L2BilEaTwi5wVjHdxfJRT+SfvEEtgMP+DvFGo3CX8n/rDlglvydqG9JubtF1cLMM2pVGtnTwQMXxIFTw0AzcCcFlcYZOzkIRMLt1oqmgXbq6Cuei94jzkCE623fvCrlILFSzcy8PGNRzSWz+mWXJxaaNbNffczRjHPhO77LGsi+CSTzUZ8VGFmP+Fu",
+        entropy: [63,208,213,89,252,215,205,9,240,240,91,24,74,28,237,26,254,215,127,33,97,209,70,171,124,225,153,233,199,176,176,254]
     };
 
     Object.defineProperty(global, "__DISPATCH_VAULT__", {
