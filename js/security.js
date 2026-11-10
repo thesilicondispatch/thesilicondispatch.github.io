@@ -175,6 +175,9 @@
             try {
                 const active = await this.getConfig();
                 if (!_cachedConfig || !_cachedConfig.auth || !active.auth) return false;
+                if (_cachedConfig.vaultConfigured === true) {
+                    return false;
+                }
                 return _constantTimeEqual(active.auth.hash, _cachedConfig.auth.hash);
             } catch (_) {
                 return false;
